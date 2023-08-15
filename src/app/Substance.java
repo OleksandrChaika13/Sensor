@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Substance {
 
-    private List<Sensor> sensors = new ArrayList<>();
+    private final List<Sensor> sensors = new ArrayList<>();
     private int state;
 
     public int getState() {
