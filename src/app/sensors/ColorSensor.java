@@ -1,4 +1,7 @@
-package app;
+package app.sensors;
+
+import app.entyties.Indicator;
+import app.entyties.Substance;
 
 public class ColorSensor extends Sensor {
 
