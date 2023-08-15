@@ -2,7 +2,7 @@ package app;
 
 public class WeightSensor extends Sensor {
 
-    public WeightSensor() {
+    public WeightSensor(Substance substance) {
         this.substance = substance;
         this.substance.attach(this);
     }
