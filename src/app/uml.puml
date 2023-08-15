@@ -1,0 +1,34 @@
+@startuml
+class app.entyties.Substance {
+- List<Sensor> sensors
+- int state
++ int getState()
++ void setState(int)
++ void attach(Sensor)
++ void notifyAllObservers()
+}
+class app.pattern.ObserverPattern {
++ {static} void observer()
+}
+class app.sensors.WeightSensor {
++ void update()
+}
+class app.entyties.Indicator {
++ {static} String indicateColor(int)
++ {static} String indicateWeight(int)
+}
+class app.sensors.ColorSensor {
++ void update()
+}
+class app.Main {
++ {static} void main(String[])
+}
+abstract class app.sensors.Sensor {
+# Substance substance
++ {abstract}void update()
+}
+
+
+app.sensors.Sensor <|-- app.sensors.WeightSensor
+app.sensors.Sensor <|-- app.sensors.ColorSensor
+@enduml
